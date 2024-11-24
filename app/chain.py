@@ -5,7 +5,7 @@ from langchain_ollama import ChatOllama
 llm = ChatOllama(
     model="llama3-groq-tool-use:latest",
     temperature=0,
-    max_tokens=1024
+    max_tokens=512
 )
 
 template = ChatPromptTemplate.from_messages(

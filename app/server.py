@@ -10,7 +10,7 @@ from fastapi import FastAPI
 from fastapi.responses import RedirectResponse, StreamingResponse
 
 # Default chain
-# from app.chain import chain
+from app.chain import chain
 
 # TODO: Add another pattern
 
