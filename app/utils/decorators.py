@@ -14,9 +14,6 @@ from app.utils.output_types import OnChatModelStreamEvent, OnToolEndEvent
 from langchain_core.messages import AIMessage
 from langchain_core.runnables.utils import Input
 from tqdm import tqdm
-from traceloop.sdk import TracerWrapper
-from traceloop.sdk.decorators import aworkflow
-
 
 class CustomChain:
     """A custom chain class that wraps a callable function."""
@@ -30,10 +27,7 @@ class CustomChain:
         Asynchronously stream events from the wrapped function.
         Applies Traceloop workflow decorator if Traceloop SDK is initialized.
         """
-        if hasattr(TracerWrapper, "instance"):
-            func = aworkflow()(self.func)
-        else:
-            func = self.func
+        func = self.func
 
         async_gen = func(*args, **kwargs)
 
