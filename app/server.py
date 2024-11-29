@@ -10,9 +10,10 @@ from fastapi import FastAPI
 from fastapi.responses import RedirectResponse, StreamingResponse
 
 # Default chain
-from app.chain import chain
+# from app.chain import chain
 
-# TODO: Add another pattern
+# LangGraph dummy agent
+from app.patterns.langgraph_dummy_agent.chain import chain
 
 # The events that are supported by the UI Fronted
 SUPPORTED_EVENTS = [
