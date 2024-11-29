@@ -12,8 +12,11 @@ from fastapi.responses import RedirectResponse, StreamingResponse
 # Default chain
 # from app.chain import chain
 
+# Custom RAG QA
+from app.patterns.custom_rag_qa.chain import chain
+
 # LangGraph dummy agent
-from app.patterns.langgraph_dummy_agent.chain import chain
+# from app.patterns.langgraph_dummy_agent.chain import chain
 
 # The events that are supported by the UI Fronted
 SUPPORTED_EVENTS = [

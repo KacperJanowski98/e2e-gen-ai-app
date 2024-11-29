@@ -81,7 +81,7 @@ class CustomChain:
         return self.func(*args, **kwargs)
 
  
-def cunstom_chain(func: Callable) -> CustomChain:
+def custom_chain(func: Callable) -> CustomChain:
     """"Decorator function that wrap a callable in a CustomChain instance."""
     @wraps(func)
     def wrapper(*args: Any, **kwargs: Any) -> Any:
