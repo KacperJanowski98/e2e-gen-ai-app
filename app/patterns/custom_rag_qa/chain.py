@@ -92,7 +92,7 @@ async def chain(
     # Inspect conversation and determine next action
     inspection_result = inspect_conversation.invoke(input)
 
-    log.info(f"Inspection result: {inspection_result}")
+    log.info(f"Inspection result: {inspection_result.content}")
 
     tool_call_result = inspection_result.tool_calls[0]
 
